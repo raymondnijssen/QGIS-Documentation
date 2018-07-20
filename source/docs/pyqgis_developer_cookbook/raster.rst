@@ -41,8 +41,10 @@ stored in the palette:
   2  # 0 = GrayOrUndefined (single band), 1 = Palette (single band), 2 = Multiband
   rlayer.bandCount()
   3
+  # TODO: update for 3.x
   rlayer.metadata()
   u'<p class="glossy">Driver:</p>...'
+  # TODO: update for 3.x
   rlayer.hasPyramids()
   False
 
@@ -95,6 +97,7 @@ In the first stage we will prepare ``QgsRasterShader`` object and configure
 its shader function:
 
   >>> fcn = QgsColorRampShader()
+  # TODO: update for 3.x
   >>> fcn.setColorRampType(QgsColorRampShader.INTERPOLATED)
   >>> lst = [ QgsColorRampShader.ColorRampItem(0, QColor(0,255,0)), \
       QgsColorRampShader.ColorRampItem(255, QColor(255,255,0)) ]
@@ -182,6 +185,7 @@ symbology in the layer list (legend) widget. This can be done as follows
 
 ::
 
+   # TODO: update for 3.x
    iface.legendInterface().refreshLayerSymbology(layer)
 
 .. index::
@@ -194,7 +198,7 @@ To do a query on value of bands of raster layer at some specified point
 
 ::
 
-  ident = rlayer.dataProvider().identify(QgsPoint(15.30, 40.98), \
+  ident = rlayer.dataProvider().identify(QgsPointXY(15.30, 40.98), \
     QgsRaster.IdentifyFormatValue)
   if ident.isValid():
     print(ident.results())

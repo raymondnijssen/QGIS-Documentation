@@ -30,6 +30,7 @@ be loaded::
     print(project.fileName())
     u'/home/user/projects/my_qgis_project.qgs'
     # Load another project
+    # TODO: update for 3.x
     project.read(QFileInfo('/home/user/projects/my_other_qgis_project.qgs'))
     print(project.fileName())
     u'/home/user/projects/my_other_qgis_project.qgs'
@@ -43,6 +44,7 @@ method of your project instance. The :func:`write()` method also accepts an opti
     # Save the project to the same
     project.write()
     # ... or to a new file
+    # TODO: update for 3.x
     project.write(QFileInfo('/home/user/projects/my_new_qgis_project.qgs'))
 
 Both :func:`read()` and :func:`write()` funtions return a boolean value that you can
